@@ -1,6 +1,6 @@
 import { Box, Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import NavBar from "./NavBar";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { useAppSelector } from "../store/store";
 
 
@@ -21,6 +21,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <ScrollRestoration />
       <CssBaseline />   {/* de loai bo cac css mac dinh */}
       <NavBar />
       <Box
@@ -34,6 +35,7 @@ function App() {
       >
         <Container maxWidth='xl' sx={{ mt: 14 }}>
           <Outlet />
+          {/* chua cac  navigation cua API */}
         </Container>
       </Box>
     </ThemeProvider>

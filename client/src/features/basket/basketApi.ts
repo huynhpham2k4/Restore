@@ -44,8 +44,7 @@ export const basketApi = createApi({
 
                 try {
                     await queryFulfilled;
-
-                    if (isNewBasket) dispatch(basketApi.util.invalidateTags(['Basket']))
+                    if (isNewBasket) dispatch(basketApi.util.invalidateTags(['basket']))
                 } catch (error) {
                     console.log(error);
                     patchResult.undo();
