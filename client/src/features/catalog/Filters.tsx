@@ -35,7 +35,7 @@ export default function Filters({ filtersData: data }: Props) {
             </Paper>
             <Paper sx={{ p: 3 }}>
                 <CheckboxButtons
-                    items={data.brands}
+                    items={data.brands} 
                     checked={brands}
                     onChange={(items: string[]) => dispatch(setBrands(items))}
                 />
