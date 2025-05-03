@@ -9,7 +9,7 @@ export const orderApi = createApi({
     endpoints: (builder) => ({
         fetchOrders: builder.query<Order[], void>({
             query: () => 'orders',
-            providesTags: ['Order']
+            providesTags: ['Orders']
         }),
         fetchOrderDetailed: builder.query<Order, number>({
             query: (id) => ({
