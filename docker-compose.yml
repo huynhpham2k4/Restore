@@ -10,4 +10,4 @@ services:
       - sql-data:/var/opt/mssql
     platform: "linux/amd64"
 volumes:
-  sql-data:
+  sql-data: 
